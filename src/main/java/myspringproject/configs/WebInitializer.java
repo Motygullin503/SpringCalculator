@@ -1,4 +1,4 @@
-package configs;
+package myspringproject.configs;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.WebApplicationContext;
@@ -23,7 +23,7 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{WebConfig.class};
+        return new Class[]{}; // This is different context with different config-file! 
     }
 
     @Override

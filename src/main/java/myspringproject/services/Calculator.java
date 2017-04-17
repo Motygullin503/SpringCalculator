@@ -1,4 +1,4 @@
-package services;
+package myspringproject.services;
 
 public interface Calculator {
 

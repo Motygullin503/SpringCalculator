@@ -7,7 +7,7 @@
 
 
     <br>
-    <form action="<c:url value="/index"/>" method="post">
+    <form action="<c:url value="/"/>" method="post">
         <label>
             <input type="number" name="num1" id="num1">
         </label>

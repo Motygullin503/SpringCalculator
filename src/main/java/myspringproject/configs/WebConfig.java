@@ -1,4 +1,4 @@
-package configs;
+package myspringproject.configs;
 
 
 import org.springframework.context.annotation.Bean;
@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("java")
+@ComponentScan({"myspringproject.controllers", "myspringproject.services"})
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 
@@ -36,10 +36,5 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/resources/sass/**").addResourceLocations("/resources/sass/");
         registry.addResourceHandler("/resources/font/**").addResourceLocations("/resources/font/");
 
-    }
-
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/index").setViewName("index");
     }
 }

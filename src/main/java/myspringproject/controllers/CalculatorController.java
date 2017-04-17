@@ -1,4 +1,4 @@
-package controllers;
+package myspringproject.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,7 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import services.Calculator;
+import myspringproject.services.Calculator;
 
 @Controller
 public class CalculatorController {
@@ -14,13 +14,15 @@ public class CalculatorController {
     @Autowired
     private Calculator calculator;
 
-
-    @RequestMapping(value = "/index", method = RequestMethod.POST)
+    @RequestMapping("/")
+    public String calcGet(){
+        return "index";
+    }
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     public String calcPost(@RequestParam String num1, @RequestParam String op, @RequestParam String num2, ModelMap map) {
         double n1 = Double.parseDouble(num1);
         double n2 = Double.parseDouble(num2);
         int o = Integer.parseInt(op);
-        System.out.println("abcasdasdasdaaaaaaaaaaa");
         switch (o) {
             case 1:
                 map.put("result", calculator.sum(n1, n2));
