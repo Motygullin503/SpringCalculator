@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SpringCalculator:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="spring-formsvalidation-1.1.war">
+      <element id="artifact" artifact-name="SpringCalculator:war exploded" />
+    </root>
+  </artifact>
+</component>
