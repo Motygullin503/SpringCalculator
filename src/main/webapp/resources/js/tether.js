@@ -384,7 +384,7 @@ var _createClass = (function () { function defineProperties(target, props) { for
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
 if (typeof TetherBase === 'undefined') {
-  throw new Error('You must include the utils.resources.js file before tether.resources.js');
+  throw new Error('You must include the utils.js file before tether.js');
 }
 
 var _TetherBase$Utils = TetherBase.Utils;
@@ -1191,7 +1191,7 @@ var TetherClass = (function () {
         }
       }
 
-      // Any resources.css change will trigger a repaint, so let's avoid one if nothing changed
+      // Any css change will trigger a repaint, so let's avoid one if nothing changed
       var writeCSS = {};
       var write = false;
       for (var key in css) {

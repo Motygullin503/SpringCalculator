@@ -15,10 +15,13 @@ public class CalculatorController {
     private Calculator calculator;
 
     @RequestMapping("/")
+    public String getMainPage(){return "main";}
+
+    @RequestMapping("/calc")
     public String calcGet(){
         return "index";
     }
-    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @RequestMapping(value = "/calc", method = RequestMethod.POST)
     public String calcPost(@RequestParam String num1, @RequestParam String op, @RequestParam String num2, ModelMap map) {
         double n1 = Double.parseDouble(num1);
         double n2 = Double.parseDouble(num2);
@@ -43,5 +46,11 @@ public class CalculatorController {
         return "index";
 
     }
+
+    @RequestMapping("/blogs")
+    public String blogsGet(){
+        return "blog";
+    }
+
 }
 

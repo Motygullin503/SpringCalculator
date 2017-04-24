@@ -1,1 +1,28 @@
 /* YOUR CUSTOM STYLES */
+.navbar {
+    content: "";
+    display: block;
+    clear: both;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+}
+.navbar-nav {
+    display: block;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+}
+ul.nav.navbar-nav{
+    display: block;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+}
+.dropdown-item:hover {
+    background-color: #4285F4 !important;
+}
+
+.h3 {
+    color: #FFFFFF !important;
+}
+.row {
+    margin-top: 50px !important;
+}
