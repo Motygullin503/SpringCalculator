@@ -7,12 +7,12 @@
 
 
     <br>
-    <form action="<c:url value="/index"/>" method="post">
+    <form class="ml-5" action="<c:url value="/calc"/>" method="post">
         <label>
             <input type="number" name="num1" id="num1">
         </label>
         <label for="op_select"> </label>
-        <select name=op id=op_select>
+        <select class="custom-select" name=op id=op_select>
             <option value="1">+</option>
             <option value="2">-</option>
             <option value="3">/</option>
@@ -22,10 +22,13 @@
             <input type="number" name="num2" id="num2">
         </label>
         <label>
-            <input class="btn btn-primary" type="submit">
+            <button class="btn btn-primary" type="submit" value="/calc">Отправить</button>
         </label> <br> <br>
 
-            <label id="res">
-                RESULT:  ${result}</label>
+
     </form>
+
+    <c:if test="${not empty result}">
+    <div class="form-header blue-gradient">
+    <h3 class="h3"> RESULT: ${result} </h3> </c:if>
 </t:mainLayout>
